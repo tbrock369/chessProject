@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Chess Website</title>
+</head>
+<body style = "background-color: DarkSeaGreen">
+
+<!-- The chess board -->
+<!-- A column -->
+<button id = "squareA1" style = "width: 80px; height: 80px; position: absolute; top: 700px; left: 100px; background-color: brown" onclick = "squareA1Object.squareClicked()"></button>
+<button id = "squareA2" style = "width: 80px; height: 80px; position: absolute; top: 620px; left: 100px; background-color: beige" onclick = "squareA2Object.squareClicked()"></button>
+<button id = "squareA3" style = "width: 80px; height: 80px; position: absolute; top: 540px; left: 100px; background-color: brown" onclick = "squareA3Object.squareClicked()"></button>
+<button id = "squareA4" style = "width: 80px; height: 80px; position: absolute; top: 460px; left: 100px; background-color: beige" onclick = "squareA4Object.squareClicked()"></button>
+<button id = "squareA5" style = "width: 80px; height: 80px; position: absolute; top: 380px; left: 100px; background-color: brown" onclick = "squareA5Object.squareClicked()"></button>
+<button id = "squareA6" style = "width: 80px; height: 80px; position: absolute; top: 300px; left: 100px; background-color: beige" onclick = "squareA6Object.squareClicked()"></button>
+<button id = "squareA7" style = "width: 80px; height: 80px; position: absolute; top: 220px; left: 100px; background-color: brown" onclick = "squareA7Object.squareClicked()"></button>
+<button id = "squareA8" style = "width: 80px; height: 80px; position: absolute; top: 140px; left: 100px; background-color: beige" onclick = "squareA8Object.squareClicked()"></button>
+
+<!-- B column -->
+<button id = "squareB1" style = "width: 80px; height: 80px; position: absolute; top: 700px; left: 180px; background-color: beige" onclick = "squareB1Object.squareClicked()"></button>
+<button id = "squareB2" style = "width: 80px; height: 80px; position: absolute; top: 620px; left: 180px; background-color: brown" onclick = "squareB2Object.squareClicked()"></button>
+<button id = "squareB3" style = "width: 80px; height: 80px; position: absolute; top: 540px; left: 180px; background-color: beige" onclick = "squareB3Object.squareClicked()"></button>
+<button id = "squareB4" style = "width: 80px; height: 80px; position: absolute; top: 460px; left: 180px; background-color: brown" onclick = "squareB4Object.squareClicked()"></button>
+<button id = "squareB5" style = "width: 80px; height: 80px; position: absolute; top: 380px; left: 180px; background-color: beige" onclick = "squareB5Object.squareClicked()"></button>
+<button id = "squareB6" style = "width: 80px; height: 80px; position: absolute; top: 300px; left: 180px; background-color: brown" onclick = "squareB6Object.squareClicked()"></button>
+<button id = "squareB7" style = "width: 80px; height: 80px; position: absolute; top: 220px; left: 180px; background-color: beige" onclick = "squareB7Object.squareClicked()"></button>
+<button id = "squareB8" style = "width: 80px; height: 80px; position: absolute; top: 140px; left: 180px; background-color: brown" onclick = "squareB8Object.squareClicked()"></button>
+
+<!-- C column -->
+<button id = "squareC1" style = "width: 80px; height: 80px; position: absolute; top: 700px; left: 260px; background-color: brown" onclick = "squareC1Object.squareClicked()"></button>
+<button id = "squareC2" style = "width: 80px; height: 80px; position: absolute; top: 620px; left: 260px; background-color: beige" onclick = "squareC2Object.squareClicked()"></button>
+<button id = "squareC3" style = "width: 80px; height: 80px; position: absolute; top: 540px; left: 260px; background-color: brown" onclick = "squareC3Object.squareClicked()"></button>
+<button id = "squareC4" style = "width: 80px; height: 80px; position: absolute; top: 460px; left: 260px; background-color: beige" onclick = "squareC4Object.squareClicked()"></button>
+<button id = "squareC5" style = "width: 80px; height: 80px; position: absolute; top: 380px; left: 260px; background-color: brown" onclick = "squareC5Object.squareClicked()"></button>
+<button id = "squareC6" style = "width: 80px; height: 80px; position: absolute; top: 300px; left: 260px; background-color: beige" onclick = "squareC6Object.squareClicked()"></button>
+<button id = "squareC7" style = "width: 80px; height: 80px; position: absolute; top: 220px; left: 260px; background-color: brown" onclick = "squareC7Object.squareClicked()"></button>
+<button id = "squareC8" style = "width: 80px; height: 80px; position: absolute; top: 140px; left: 260px; background-color: beige" onclick = "squareC8Object.squareClicked()"></button>
+
+<!-- D column -->
+<button id = "squareD1" style = "width: 80px; height: 80px; position: absolute; top: 700px; left: 340px; background-color: beige" onclick = "squareD1Object.squareClicked()"></button>
+<button id = "squareD2" style = "width: 80px; height: 80px; position: absolute; top: 620px; left: 340px; background-color: brown" onclick = "squareD2Object.squareClicked()"></button>
+<button id = "squareD3" style = "width: 80px; height: 80px; position: absolute; top: 540px; left: 340px; background-color: beige" onclick = "squareD3Object.squareClicked()"></button>
+<button id = "squareD4" style = "width: 80px; height: 80px; position: absolute; top: 460px; left: 340px; background-color: brown" onclick = "squareD4Object.squareClicked()"></button>
+<button id = "squareD5" style = "width: 80px; height: 80px; position: absolute; top: 380px; left: 340px; background-color: beige" onclick = "squareD5Object.squareClicked()"></button>
+<button id = "squareD6" style = "width: 80px; height: 80px; position: absolute; top: 300px; left: 340px; background-color: brown" onclick = "squareD6Object.squareClicked()"></button>
+<button id = "squareD7" style = "width: 80px; height: 80px; position: absolute; top: 220px; left: 340px; background-color: beige" onclick = "squareD7Object.squareClicked()"></button>
+<button id = "squareD8" style = "width: 80px; height: 80px; position: absolute; top: 140px; left: 340px; background-color: brown" onclick = "squareD8Object.squareClicked()"></button>
+
+<!-- E column -->
+<button id = "squareE1" style = "width: 80px; height: 80px; position: absolute; top: 700px; left: 420px; background-color: brown" onclick = "squareE1Object.squareClicked()"></button>
+<button id = "squareE2" style = "width: 80px; height: 80px; position: absolute; top: 620px; left: 420px; background-color: beige" onclick = "squareE2Object.squareClicked()"></button>
+<button id = "squareE3" style = "width: 80px; height: 80px; position: absolute; top: 540px; left: 420px; background-color: brown" onclick = "squareE3Object.squareClicked()"></button>
+<button id = "squareE4" style = "width: 80px; height: 80px; position: absolute; top: 460px; left: 420px; background-color: beige" onclick = "squareE4Object.squareClicked()"></button>
+<button id = "squareE5" style = "width: 80px; height: 80px; position: absolute; top: 380px; left: 420px; background-color: brown" onclick = "squareE5Object.squareClicked()"></button>
+<button id = "squareE6" style = "width: 80px; height: 80px; position: absolute; top: 300px; left: 420px; background-color: beige" onclick = "squareE6Object.squareClicked()"></button>
+<button id = "squareE7" style = "width: 80px; height: 80px; position: absolute; top: 220px; left: 420px; background-color: brown" onclick = "squareE7Object.squareClicked()"></button>
+<button id = "squareE8" style = "width: 80px; height: 80px; position: absolute; top: 140px; left: 420px; background-color: beige" onclick = "squareE8Object.squareClicked()"></button>
+
+<!-- F column -->
+<button id = "squareF1" style = "width: 80px; height: 80px; position: absolute; top: 700px; left: 500px; background-color: beige" onclick = "squareF1Object.squareClicked()"></button>
+<button id = "squareF2" style = "width: 80px; height: 80px; position: absolute; top: 620px; left: 500px; background-color: brown" onclick = "squareF2Object.squareClicked()"></button>
+<button id = "squareF3" style = "width: 80px; height: 80px; position: absolute; top: 540px; left: 500px; background-color: beige" onclick = "squareF3Object.squareClicked()"></button>
+<button id = "squareF4" style = "width: 80px; height: 80px; position: absolute; top: 460px; left: 500px; background-color: brown" onclick = "squareF4Object.squareClicked()"></button>
+<button id = "squareF5" style = "width: 80px; height: 80px; position: absolute; top: 380px; left: 500px; background-color: beige" onclick = "squareF5Object.squareClicked()"></button>
+<button id = "squareF6" style = "width: 80px; height: 80px; position: absolute; top: 300px; left: 500px; background-color: brown" onclick = "squareF6Object.squareClicked()"></button>
+<button id = "squareF7" style = "width: 80px; height: 80px; position: absolute; top: 220px; left: 500px; background-color: beige" onclick = "squareF7Object.squareClicked()"></button>
+<button id = "squareF8" style = "width: 80px; height: 80px; position: absolute; top: 140px; left: 500px; background-color: brown" onclick = "squareF8Object.squareClicked()"></button>
+
+<!-- G column -->
+<button id = "squareG1" style = "width: 80px; height: 80px; position: absolute; top: 700px; left: 580px; background-color: brown" onclick = "squareG1Object.squareClicked()"></button>
+<button id = "squareG2" style = "width: 80px; height: 80px; position: absolute; top: 620px; left: 580px; background-color: beige" onclick = "squareG2Object.squareClicked()"></button>
+<button id = "squareG3" style = "width: 80px; height: 80px; position: absolute; top: 540px; left: 580px; background-color: brown" onclick = "squareG3Object.squareClicked()"></button>
+<button id = "squareG4" style = "width: 80px; height: 80px; position: absolute; top: 460px; left: 580px; background-color: beige" onclick = "squareG4Object.squareClicked()"></button>
+<button id = "squareG5" style = "width: 80px; height: 80px; position: absolute; top: 380px; left: 580px; background-color: brown" onclick = "squareG5Object.squareClicked()"></button>
+<button id = "squareG6" style = "width: 80px; height: 80px; position: absolute; top: 300px; left: 580px; background-color: beige" onclick = "squareG6Object.squareClicked()"></button>
+<button id = "squareG7" style = "width: 80px; height: 80px; position: absolute; top: 220px; left: 580px; background-color: brown" onclick = "squareG7Object.squareClicked()"></button>
+<button id = "squareG8" style = "width: 80px; height: 80px; position: absolute; top: 140px; left: 580px; background-color: beige" onclick = "squareG8Object.squareClicked()"></button>
+
+<!-- H column -->
+<button id = "squareH1" style = "width: 80px; height: 80px; position: absolute; top: 700px; left: 660px; background-color: beige" onclick = "squareH1Object.squareClicked()"></button>
+<button id = "squareH2" style = "width: 80px; height: 80px; position: absolute; top: 620px; left: 660px; background-color: brown" onclick = "squareH2Object.squareClicked()"></button>
+<button id = "squareH3" style = "width: 80px; height: 80px; position: absolute; top: 540px; left: 660px; background-color: beige" onclick = "squareH3Object.squareClicked()"></button>
+<button id = "squareH4" style = "width: 80px; height: 80px; position: absolute; top: 460px; left: 660px; background-color: brown" onclick = "squareH4Object.squareClicked()"></button>
+<button id = "squareH5" style = "width: 80px; height: 80px; position: absolute; top: 380px; left: 660px; background-color: beige" onclick = "squareH5Object.squareClicked()"></button>
+<button id = "squareH6" style = "width: 80px; height: 80px; position: absolute; top: 300px; left: 660px; background-color: brown" onclick = "squareH6Object.squareClicked()"></button>
+<button id = "squareH7" style = "width: 80px; height: 80px; position: absolute; top: 220px; left: 660px; background-color: beige" onclick = "squareH7Object.squareClicked()"></button>
+<button id = "squareH8" style = "width: 80px; height: 80px; position: absolute; top: 140px; left: 660px; background-color: brown" onclick = "squareH8Object.squareClicked()"></button>
+
+
+
+<!-- pieces that start on the board-->
+<canvas id = "whitePawnA2" width = "40" height  = "50" style = "position: absolute; top: 635px; left: 120px" onclick = "whitePawnA2Object.pieceSelected()"></canvas>
+<canvas id = "whitePawnB2" width = "40" height  = "50" style = "position: absolute; top: 635px; left: 200px" onclick = "whitePawnB2Object.pieceSelected()"></canvas>
+<canvas id = "whitePawnC2" width = "40" height  = "50" style = "position: absolute; top: 635px; left: 280px" onclick = "whitePawnC2Object.pieceSelected()"></canvas>
+<canvas id = "whitePawnD2" width = "40" height  = "50" style = "position: absolute; top: 635px; left: 360px" onclick = "whitePawnD2Object.pieceSelected()"></canvas>
+<canvas id = "whitePawnE2" width = "40" height  = "50" style = "position: absolute; top: 635px; left: 440px" onclick = "whitePawnE2Object.pieceSelected()"></canvas>
+<canvas id = "whitePawnF2" width = "40" height  = "50" style = "position: absolute; top: 635px; left: 520px" onclick = "whitePawnF2Object.pieceSelected()"></canvas>
+<canvas id = "whitePawnG2" width = "40" height  = "50" style = "position: absolute; top: 635px; left: 600px" onclick = "whitePawnG2Object.pieceSelected()"></canvas>
+<canvas id = "whitePawnH2" width = "40" height  = "50" style = "position: absolute; top: 635px; left: 680px" onclick = "whitePawnH2Object.pieceSelected()"></canvas>
+
+<canvas id = "blackPawnA7" width = "40" height  = "50" style = "position: absolute; top: 235px; left: 120px" onclick = "blackPawnA7Object.pieceSelected()"></canvas>
+<canvas id = "blackPawnB7" width = "40" height  = "50" style = "position: absolute; top: 235px; left: 200px" onclick = "blackPawnB7Object.pieceSelected()"></canvas>
+<canvas id = "blackPawnC7" width = "40" height  = "50" style = "position: absolute; top: 235px; left: 280px" onclick = "blackPawnC7Object.pieceSelected()"></canvas>
+<canvas id = "blackPawnD7" width = "40" height  = "50" style = "position: absolute; top: 235px; left: 360px" onclick = "blackPawnD7Object.pieceSelected()"></canvas>
+<canvas id = "blackPawnE7" width = "40" height  = "50" style = "position: absolute; top: 235px; left: 440px" onclick = "blackPawnE7Object.pieceSelected()"></canvas>
+<canvas id = "blackPawnF7" width = "40" height  = "50" style = "position: absolute; top: 235px; left: 520px" onclick = "blackPawnF7Object.pieceSelected()"></canvas>
+<canvas id = "blackPawnG7" width = "40" height  = "50" style = "position: absolute; top: 235px; left: 600px" onclick = "blackPawnG7Object.pieceSelected()"></canvas>
+<canvas id = "blackPawnH7" width = "40" height  = "50" style = "position: absolute; top: 235px; left: 680px" onclick = "blackPawnH7Object.pieceSelected()"></canvas>
+
+<canvas id = "whiteRookA1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 120px" onclick = "whiteRookA1Object.pieceSelected()"></canvas>
+<canvas id = "whiteRookH1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 680px" onclick = "whiteRookH1Object.pieceSelected()"></canvas>
+<canvas id = "blackRookA8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 120px" onclick = "blackRookA8Object.pieceSelected()"></canvas>
+<canvas id = "blackRookH8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 680px" onclick = "blackRookH8Object.pieceSelected()"></canvas>
+
+<canvas id = "whiteKnightB1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 200px" onclick = "whiteKnightB1Object.pieceSelected()"></canvas>
+<canvas id = "whiteKnightG1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 600px" onclick = "whiteKnightG1Object.pieceSelected()"></canvas>
+<canvas id = "blackKnightB8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 200px" onclick = "blackKnightB8Object.pieceSelected()"></canvas>
+<canvas id = "blackKnightG8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 600px" onclick = "blackKnightG8Object.pieceSelected()"></canvas>
+
+<canvas id = "whiteBishopC1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 280px" onclick = "whiteBishopC1Object.pieceSelected()"></canvas>
+<canvas id = "whiteBishopF1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 520px" onclick = "whiteBishopF1Object.pieceSelected()"></canvas>
+<canvas id = "blackBishopC8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 280px" onclick = "blackBishopC8Object.pieceSelected()"></canvas>
+<canvas id = "blackBishopF8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 520px" onclick = "blackBishopF8Object.pieceSelected()"></canvas>
+
+<canvas id = "whiteQueenD1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 360px" onclick = "whiteQueenD1Object.pieceSelected()"></canvas>
+<canvas id = "blackQueenD8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 360px" onclick = "blackQueenD8Object.pieceSelected()"></canvas>
+
+<canvas id = "whiteKingE1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 440px" onclick = "whiteKingE1Object.pieceSelected()"></canvas>
+<canvas id = "blackKingE8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 440px" onclick = "blackKingE8Object.pieceSelected()"></canvas>
+
+
+
+<!-- Pawn Promtion Pieces (pieces that are hidden until they replace a promoted pawn -->
+<canvas id = "whiteKnightA8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 120px; display: none" onclick = "whiteKnightA8Object.pieceSelected()"></canvas>
+<canvas id = "whiteBishopA8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 120px; display: none" onclick = "whiteBishopA8Object.pieceSelected()"></canvas>
+<canvas id = "whiteRookA8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 120px; display: none" onclick = "whiteRookA8Object.pieceSelected()"></canvas>
+<canvas id = "whiteQueenA8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 120px; display: none" onclick = "whiteQueenA8Object.pieceSelected()"></canvas>
+
+<canvas id = "whiteKnightB8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 200px; display: none" onclick = "whiteKnightB8Object.pieceSelected()"></canvas>
+<canvas id = "whiteBishopB8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 200px; display: none" onclick = "whiteBishopB8Object.pieceSelected()"></canvas>
+<canvas id = "whiteRookB8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 200px; display: none" onclick = "whiteRookB8Object.pieceSelected()"></canvas>
+<canvas id = "whiteQueenB8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 200px; display: none" onclick = "whiteQueenB8Object.pieceSelected()"></canvas>
+
+<canvas id = "whiteKnightC8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 280px; display: none" onclick = "whiteKnightC8Object.pieceSelected()"></canvas>
+<canvas id = "whiteBishopC8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 280px; display: none" onclick = "whiteBishopC8Object.pieceSelected()"></canvas>
+<canvas id = "whiteRookC8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 280px; display: none" onclick = "whiteRookC8Object.pieceSelected()"></canvas>
+<canvas id = "whiteQueenC8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 280px; display: none" onclick = "whiteQueenC8Object.pieceSelected()"></canvas>
+
+<canvas id = "whiteKnightD8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 360px; display: none" onclick = "whiteKnightD8Object.pieceSelected()"></canvas>
+<canvas id = "whiteBishopD8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 360px; display: none" onclick = "whiteBishopD8Object.pieceSelected()"></canvas>
+<canvas id = "whiteRookD8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 360px; display: none" onclick = "whiteRookD8Object.pieceSelected()"></canvas>
+<canvas id = "whiteQueenD8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 360px; display: none" onclick = "whiteQueenD8Object.pieceSelected()"></canvas>
+
+<canvas id = "whiteKnightE8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 440px; display: none" onclick = "whiteKnightE8Object.pieceSelected()"></canvas>
+<canvas id = "whiteBishopE8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 440px; display: none" onclick = "whiteBishopE8Object.pieceSelected()"></canvas>
+<canvas id = "whiteRookE8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 440px; display: none" onclick = "whiteRookE8Object.pieceSelected()"></canvas>
+<canvas id = "whiteQueenE8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 440px; display: none" onclick = "whiteQueenE8Object.pieceSelected()"></canvas>
+
+<canvas id = "whiteKnightF8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 520px; display: none" onclick = "whiteKnightF8Object.pieceSelected()"></canvas>
+<canvas id = "whiteBishopF8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 520px; display: none" onclick = "whiteBishopF8Object.pieceSelected()"></canvas>
+<canvas id = "whiteRookF8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 520px; display: none" onclick = "whiteRookF8Object.pieceSelected()"></canvas>
+<canvas id = "whiteQueenF8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 520px; display: none" onclick = "whiteQueenF8Object.pieceSelected()"></canvas>
+
+<canvas id = "whiteKnightG8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 600px; display: none" onclick = "whiteKnightG8Object.pieceSelected()"></canvas>
+<canvas id = "whiteBishopG8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 600px; display: none" onclick = "whiteBishopG8Object.pieceSelected()"></canvas>
+<canvas id = "whiteRookG8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 600px; display: none" onclick = "whiteRookG8Object.pieceSelected()"></canvas>
+<canvas id = "whiteQueenG8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 600px; display: none" onclick = "whiteQueenG8Object.pieceSelected()"></canvas>
+
+<canvas id = "whiteKnightH8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 680px; display: none" onclick = "whiteKnightH8Object.pieceSelected()"></canvas>
+<canvas id = "whiteBishopH8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 680px; display: none" onclick = "whiteBishopH8Object.pieceSelected()"></canvas>
+<canvas id = "whiteRookH8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 680px; display: none" onclick = "whiteRookH8Object.pieceSelected()"></canvas>
+<canvas id = "whiteQueenH8" width = "40" height  = "50" style = "position: absolute; top: 155px; left: 680px; display: none" onclick = "whiteQueenH8Object.pieceSelected()"></canvas>
+
+
+<canvas id = "blackKnightA1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 680px; display: none" onclick = "blackKnightA1Object.pieceSelected()"></canvas>
+<canvas id = "blackBishopA1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 680px; display: none" onclick = "blackBishopA1Object.pieceSelected()"></canvas>
+<canvas id = "blackRookA1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 680px; display: none" onclick = "blackRookA1Object.pieceSelected()"></canvas>
+<canvas id = "blackQueenA1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 680px; display: none" onclick = "blackQueenA1Object.pieceSelected()"></canvas>
+
+<canvas id = "blackKnightB1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 600px; display: none" onclick = "blackKnightB1Object.pieceSelected()"></canvas>
+<canvas id = "blackBishopB1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 600px; display: none" onclick = "blackBishopB1Object.pieceSelected()"></canvas>
+<canvas id = "blackRookB1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 600px; display: none" onclick = "blackRookB1Object.pieceSelected()"></canvas>
+<canvas id = "blackQueenB1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 600px; display: none" onclick = "blackQueenB1Object.pieceSelected()"></canvas>
+
+<canvas id = "blackKnightC1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 520px; display: none" onclick = "blackKnightC1Object.pieceSelected()"></canvas>
+<canvas id = "blackBishopC1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 520px; display: none" onclick = "blackBishopC1Object.pieceSelected()"></canvas>
+<canvas id = "blackRookC1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 520px; display: none" onclick = "blackRookC1Object.pieceSelected()"></canvas>
+<canvas id = "blackQueenC1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 520px; display: none" onclick = "blackQueenC1Object.pieceSelected()"></canvas>
+
+<canvas id = "blackKnightD1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 440px; display: none" onclick = "blackKnightD1Object.pieceSelected()"></canvas>
+<canvas id = "blackBishopD1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 440px; display: none" onclick = "blackBishopD1Object.pieceSelected()"></canvas>
+<canvas id = "blackRookD1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 440px; display: none" onclick = "blackRookD1Object.pieceSelected()"></canvas>
+<canvas id = "blackQueenD1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 440px; display: none" onclick = "blackQueenD1Object.pieceSelected()"></canvas>
+
+<canvas id = "blackKnightE1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 360px; display: none" onclick = "blackKnightE1Object.pieceSelected()"></canvas>
+<canvas id = "blackBishopE1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 360px; display: none" onclick = "blackBishopE1Object.pieceSelected()"></canvas>
+<canvas id = "blackRookE1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 360px; display: none" onclick = "blackRookE1Object.pieceSelected()"></canvas>
+<canvas id = "blackQueenE1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 360px; display: none" onclick = "blackQueenE1Object.pieceSelected()"></canvas>
+
+<canvas id = "blackKnightF1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 280px; display: none" onclick = "blackKnightF1Object.pieceSelected()"></canvas>
+<canvas id = "blackBishopF1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 280px; display: none" onclick = "blackBishopF1Object.pieceSelected()"></canvas>
+<canvas id = "blackRookF1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 280px; display: none" onclick = "blackRookF1Object.pieceSelected()"></canvas>
+<canvas id = "blackQueenF1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 280px; display: none" onclick = "blackQueenF1Object.pieceSelected()"></canvas>
+
+<canvas id = "blackKnightG1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 200px; display: none" onclick = "blackKnightG1Object.pieceSelected()"></canvas>
+<canvas id = "blackBishopG1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 200px; display: none" onclick = "blackBishopG1Object.pieceSelected()"></canvas>
+<canvas id = "blackRookG1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 200px; display: none" onclick = "blackRookG1Object.pieceSelected()"></canvas>
+<canvas id = "blackQueenG1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 200px; display: none" onclick = "blackQueenG1Object.pieceSelected()"></canvas>
+
+<canvas id = "blackKnightH1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 120px; display: none" onclick = "blackKnightH1Object.pieceSelected()"></canvas>
+<canvas id = "blackBishopH1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 120px; display: none" onclick = "blackBishopH1Object.pieceSelected()"></canvas>
+<canvas id = "blackRookH1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 120px; display: none" onclick = "blackRookH1Object.pieceSelected()"></canvas>
+<canvas id = "blackQueenH1" width = "40" height  = "50" style = "position: absolute; top: 715px; left: 120px; display: none" onclick = "blackQueenH1Object.pieceSelected()"></canvas>
+
+<p id = "gameInformation" style = "position: absolute; top: 70px; left: 588px; font-size: 30px; font-weight: bold"></p> 
+<p id = "checkmateOrStalemate" style = "position: absolute; top: 70px; left: 100px; font-size: 30px; font-weight: bold"></p> 
+
+<form id = "formPawnPromotion" style = "position: absolute; top: 155px; left: 750px; background-color: orange; border-style: solid; display: none">
+	<text id = "textPawnPromotion" style = "font-weight: bold">Pawn Promotion:</text> <br>
+	<input id = "radioPawnToKnight" type = "radio" name = "radiosPawnPromotion">
+	<label for "radioPawnToKnight">Knight</label><br>
+	<input id = "radioPawnToBishop" type = "radio" name = "radiosPawnPromotion">
+	<label for "radioPawnToBishop">Bishop</label><br>
+	<input id = "radioPawnToRook" type = "radio" name = "radiosPawnPromotion">
+	<label for "radioPawnToRook">Rook</label><br>
+	<input id = "radioPawnToQueen" type = "radio" name = "radiosPawnPromotion">
+	<label for "radioPawnToQueen">Queen</label><br>
+	<input id = "buttonPawnPromotion" type = "button" value = "Submit" onclick = "pawnPromotion()">
+</form>
+
+<script src = "classPiece.js"></script>
+<script src = "classPawn.js"></script> 
+<script src = "classRook.js"></script>
+<script src = "classKnight.js"></script>
+<script src = "classBishop.js"></script>
+<script src = "classQueen.js"></script>
+<script src = "classKing.js"></script>
+<script src = "pieceHighlighting.js"></script> 
+<script src = "classSquare.js"></script>
+<script src = "createPieceAndSquareObjects.js"></script>
+<script src = "pawnPromotion.js"></script>
+<script src = "checkAndCheckmate.js"></script>
+
+<script>
+const squareObjects = [
+	[squareA1Object, squareA2Object, squareA3Object, squareA4Object, squareA5Object, squareA6Object, squareA7Object, squareA8Object],
+	[squareB1Object, squareB2Object, squareB3Object, squareB4Object, squareB5Object, squareB6Object, squareB7Object, squareB8Object],
+	[squareC1Object, squareC2Object, squareC3Object, squareC4Object, squareC5Object, squareC6Object, squareC7Object, squareC8Object],
+	[squareD1Object, squareD2Object, squareD3Object, squareD4Object, squareD5Object, squareD6Object, squareD7Object, squareD8Object],
+	[squareE1Object, squareE2Object, squareE3Object, squareE4Object, squareE5Object, squareE6Object, squareE7Object, squareE8Object],
+	[squareF1Object, squareF2Object, squareF3Object, squareF4Object, squareF5Object, squareF6Object, squareF7Object, squareF8Object],
+	[squareG1Object, squareG2Object, squareG3Object, squareG4Object, squareG5Object, squareG6Object, squareG7Object, squareG8Object],
+	[squareH1Object, squareH2Object, squareH3Object, squareH4Object, squareH5Object, squareH6Object, squareH7Object, squareH8Object]
+];
+
+
+const squareObjectsBySquareId = {
+	squareA1: squareA1Object,
+	squareA2: squareA2Object,
+	squareA3: squareA3Object,
+	squareA4: squareA4Object,
+	squareA5: squareA5Object,
+	squareA6: squareA6Object,
+	squareA7: squareA7Object,
+	squareA8: squareA8Object,
+	
+	squareB1: squareB1Object,
+	squareB2: squareB2Object,
+	squareB3: squareB3Object,
+	squareB4: squareB4Object,
+	squareB5: squareB5Object,
+	squareB6: squareB6Object,
+	squareB7: squareB7Object,
+	squareB8: squareB8Object,
+	
+	squareC1: squareC1Object,
+	squareC2: squareC2Object,
+	squareC3: squareC3Object,
+	squareC4: squareC4Object,
+	squareC5: squareC5Object,
+	squareC6: squareC6Object,
+	squareC7: squareC7Object,
+	squareC8: squareC8Object,
+	
+	squareD1: squareD1Object,
+	squareD2: squareD2Object,
+	squareD3: squareD3Object,
+	squareD4: squareD4Object,
+	squareD5: squareD5Object,
+	squareD6: squareD6Object,
+	squareD7: squareD7Object,
+	squareD8: squareD8Object,
+	
+	squareE1: squareE1Object,
+	squareE2: squareE2Object,
+	squareE3: squareE3Object,
+	squareE4: squareE4Object,
+	squareE5: squareE5Object,
+	squareE6: squareE6Object,
+	squareE7: squareE7Object,
+	squareE8: squareE8Object,
+	
+	squareF1: squareF1Object,
+	squareF2: squareF2Object,
+	squareF3: squareF3Object,
+	squareF4: squareF4Object,
+	squareF5: squareF5Object,
+	squareF6: squareF6Object,
+	squareF7: squareF7Object,
+	squareF8: squareF8Object,
+	
+	squareG1: squareG1Object,
+	squareG2: squareG2Object,
+	squareG3: squareG3Object,
+	squareG4: squareG4Object,
+	squareG5: squareG5Object,
+	squareG6: squareG6Object,
+	squareG7: squareG7Object,
+	squareG8: squareG8Object,
+	
+	squareH1: squareH1Object,
+	squareH2: squareH2Object,
+	squareH3: squareH3Object,
+	squareH4: squareH4Object,
+	squareH5: squareH5Object,
+	squareH6: squareH6Object,
+	squareH7: squareH7Object,
+	squareH8: squareH8Object
+};
+
+function resetColorsOnBoard()
+{
+	for (let i = 0; i < 8; i++)  //every time a piece is selected, every square is unhighlighted. Then, the squares that should be highlighted is recalculated and then highlighted.
+	{
+		for (let j = 0; j < 8; j++)
+		{
+			squareObjects[i][j].unhighlightSquare()
+		}
+	}
+}
+
+function resetComingPieceIdOnBoard()
+{
+	for (let i = 0; i < 8; i++)  //every time a piece is selected, the comingPieceId for each square is set to "none". Then, if selected can move to a square, those square's comingPieceId = this.pieceId
+	{
+		for (let j = 0; j < 8; j++)
+		{
+			squareObjects[i][j].setComingPieceId("none");
+		}
+	}
+}
+
+let turnToMove = "white"; 
+
+//These store the pawnId of the pawn that has just performed a two-space starting move. After the opponents next move, these variables are set back to "none".
+let whiteEnPassant = "none"; 
+let blackEnPassant = "none";
+
+//This pieceObjects object lists each piece as a pair by its id and object
+pieceObjects = {
+	whitePawnA2: whitePawnA2Object,
+	whitePawnB2: whitePawnB2Object,
+	whitePawnC2: whitePawnC2Object,
+	whitePawnD2: whitePawnD2Object,
+	whitePawnE2: whitePawnE2Object,
+	whitePawnF2: whitePawnF2Object,
+	whitePawnG2: whitePawnG2Object,
+	whitePawnH2: whitePawnH2Object,
+	blackPawnA7: blackPawnA7Object,
+	blackPawnB7: blackPawnB7Object,
+	blackPawnC7: blackPawnC7Object,
+	blackPawnD7: blackPawnD7Object,
+	blackPawnE7: blackPawnE7Object,
+	blackPawnF7: blackPawnF7Object,
+	blackPawnG7: blackPawnG7Object,
+	blackPawnH7: blackPawnH7Object,
+	
+	whiteRookA1: whiteRookA1Object,
+	whiteRookH1: whiteRookH1Object,
+	blackRookA8: blackRookA8Object,
+	blackRookH8: blackRookH8Object,
+
+	whiteKnightB1: whiteKnightB1Object,
+	whiteKnightG1: whiteKnightG1Object,
+	blackKnightB8: blackKnightB8Object,
+	blackKnightG8: blackKnightG8Object,
+
+	whiteBishopC1: whiteBishopC1Object,
+	whiteBishopF1: whiteBishopF1Object,
+	blackBishopC8: blackBishopC8Object,
+	blackBishopF8: blackBishopF8Object,
+
+	whiteQueenD1: whiteQueenD1Object,
+	blackQueenD8: blackQueenD8Object,
+	
+	whiteKingE1: whiteKingE1Object,
+	blackKingE8: blackKingE8Object,
+	
+	//pawn promotion pieces
+	blackKnightA1: blackKnightA1Object,
+	blackBishopA1: blackBishopA1Object,
+	blackRookA1: blackRookA1Object,
+	blackQueenA1: blackQueenA1Object,
+	
+	blackKnightB1: blackKnightB1Object,
+	blackBishopB1: blackBishopB1Object,
+	blackRookB1: blackRookB1Object,
+	blackQueenB1: blackQueenB1Object,
+	
+	blackKnightC1: blackKnightC1Object,
+	blackBishopC1: blackBishopC1Object,
+	blackRookC1: blackRookC1Object,
+	blackQueenC1: blackQueenC1Object,
+	
+	blackKnightD1: blackKnightD1Object,
+	blackBishopD1: blackBishopD1Object,
+	blackRookD1: blackRookD1Object,
+	blackQueenD1: blackQueenD1Object,
+	
+	blackKnightE1: blackKnightE1Object,
+	blackBishopE1: blackBishopE1Object,
+	blackRookE1: blackRookE1Object,
+	blackQueenE1: blackQueenE1Object,
+	
+	blackKnightF1: blackKnightF1Object,
+	blackBishopF1: blackBishopF1Object,
+	blackRookF1: blackRookF1Object,
+	blackQueenF1: blackQueenF1Object,
+	
+	blackKnightG1: blackKnightG1Object,
+	blackBishopG1: blackBishopG1Object,
+	blackRookG1: blackRookG1Object,
+	blackQueenG1: blackQueenG1Object,
+	
+	blackKnightH1: blackKnightH1Object,
+	blackBishopH1: blackBishopH1Object,
+	blackRookH1: blackRookH1Object,
+	blackQueenH1: blackQueenH1Object,
+	
+	
+	whiteKnightA8: whiteKnightA8Object,
+	whiteBishopA8: whiteBishopA8Object,
+	whiteRookA8: whiteRookA8Object,
+	whiteQueenA8: whiteQueenA8Object,
+	
+	whiteKnightB8: whiteKnightB8Object,
+	whiteBishopB8: whiteBishopB8Object,
+	whiteRookB8: whiteRookB8Object,
+	whiteQueenB8: whiteQueenB8Object,
+	
+	whiteKnightC8: whiteKnightC8Object,
+	whiteBishopC8: whiteBishopC8Object,
+	whiteRookC8: whiteRookC8Object,
+	whiteQueenC8: whiteQueenC8Object,
+	
+	whiteKnightD8: whiteKnightD8Object,
+	whiteBishopD8: whiteBishopD8Object,
+	whiteRookD8: whiteRookD8Object,
+	whiteQueenD8: whiteQueenD8Object,
+	
+	whiteKnightE8: whiteKnightE8Object,
+	whiteBishopE8: whiteBishopE8Object,
+	whiteRookE8: whiteRookE8Object,
+	whiteQueenE8: whiteQueenE8Object,
+	
+	whiteKnightF8: whiteKnightF8Object,
+	whiteBishopF8: whiteBishopF8Object,
+	whiteRookF8: whiteRookF8Object,
+	whiteQueenF8: whiteQueenF8Object,
+	
+	whiteKnightG8: whiteKnightG8Object,
+	whiteBishopG8: whiteBishopG8Object,
+	whiteRookG8: whiteRookG8Object,
+	whiteQueenG8: whiteQueenG8Object,
+	
+	whiteKnightH8: whiteKnightH8Object,
+	whiteBishopH8: whiteBishopH8Object,
+	whiteRookH8: whiteRookH8Object,
+	whiteQueenH8: whiteQueenH8Object,		
+};
+
+//Displaying whose turn it is
+displayTurnToMove();
+function displayTurnToMove()
+{
+	document.getElementById("gameInformation").innerHTML = "Turn: " + turnToMove;
+	
+	//display if the side whose turn it is is in check
+	if (turnToMove == "white" && whiteKingInCheck == true)
+	{
+		//document.getElementById("gameInformation").innerHTML = document.getElementById("gameInformation").innerHTML + "<br>Check: white";
+		document.getElementById("checkmateOrStalemate").innerHTML = "White king in check";
+	}
+	else if (turnToMove == "black" && blackKingInCheck == true)
+	{
+		//document.getElementById("gameInformation").innerHTML = document.getElementById("gameInformation").innerHTML + "<br>Check: black";
+		document.getElementById("checkmateOrStalemate").innerHTML = "Black king in check";
+	}
+	else
+	{
+		document.getElementById("checkmateOrStalemate").innerHTML = "";
+	}
+	
+}
+
+
+//squareA1: top: 700px; left: 100px;
+//squareH8: top: 140px; left: 660px;
+//For the squares, top increments by -80 and left increments by 80 
+
+//whiteRookA1: top: 715px; left: 120px
+//blackRookH8: top: 155px; left: 680px
+//For the pieces, top is 15 more than the top for the corresponding square, and left is 20 more than the left for the occupying square
+function rotateBoard()
+{
+	//change the locations of the squares on the screen
+	if (turnToMove == "black")
+	{
+		for (let i = 0; i < 8; i++)
+		{
+			for (let j = 0; j < 8; j++)
+			{
+				document.getElementById(squareObjects[i][j].getSquareId()).style.left = (7 - i) * 80 + 100 + "px";
+				document.getElementById(squareObjects[i][j].getSquareId()).style.top = (7 - j) * -80 + 700 + "px";
+				squareObjects[i][j].setXScreenLocation((7 - i) * 80 + 100 + "px");
+				squareObjects[i][j].setYScreenLocation((7 - j) * -80 + 700 + "px");
+				
+				if (squareObjects[i][j].getOccupyingPieceId() != "none")
+				{
+					document.getElementById(squareObjects[i][j].getOccupyingPieceId()).style.left = squareObjects[i][j].getXScreenLocationForOccupyingPiece();
+					document.getElementById(squareObjects[i][j].getOccupyingPieceId()).style.top = squareObjects[i][j].getYScreenLocationForOccupyingPiece();
+				}
+			}
+		}
+	}
+	else
+	{
+		for (let i = 0; i < 8; i++)
+		{
+			for (let j = 0; j < 8; j++)
+			{
+				document.getElementById(squareObjects[i][j].getSquareId()).style.left = (7 - i) * -80 + 660 + "px";
+				document.getElementById(squareObjects[i][j].getSquareId()).style.top = (7 - j) * 80 + 140 + "px";
+				squareObjects[i][j].setXScreenLocation((7 - i) * -80 + 660 + "px");
+				squareObjects[i][j].setYScreenLocation((7 - j) * 80 + 140 + "px");
+				
+				if (squareObjects[i][j].getOccupyingPieceId() != "none")
+				{
+					document.getElementById(squareObjects[i][j].getOccupyingPieceId()).style.left = squareObjects[i][j].getXScreenLocationForOccupyingPiece();
+					document.getElementById(squareObjects[i][j].getOccupyingPieceId()).style.top = squareObjects[i][j].getYScreenLocationForOccupyingPiece();
+				}
+			}
+		}
+	}
+}
+
+</script>
+</body>
+</html>
