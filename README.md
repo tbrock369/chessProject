@@ -1,7 +1,7 @@
 # Project Name:
 chessProject
 # Project Description: 
-This is a personal project I created to create a website to play chess using HTML, CSS, and JavaScript. 
+This is a personal project I created to play chess using HTML, CSS, and JavaScript. 
 # Features this project currently has:
 *	Design elements including the shape of each piece and the colors of the pieces, squares, and background
 *	Each piece can move by first clicking on the piece you would like to move and then clicking on a square it is allowed to move to
